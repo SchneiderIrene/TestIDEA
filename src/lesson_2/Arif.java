@@ -1,6 +1,6 @@
-import java.util.Arrays;
+package lesson_2;
 
-public class Main {
+public class Arif {
     public static void main(String[] args) {
         double a = 25;
         double b = 3;
