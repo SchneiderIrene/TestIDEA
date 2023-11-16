@@ -1,4 +1,4 @@
-package lesson_7;
+package lesson_07;
 
 public class Cons {
     public static void main(String[] args) {

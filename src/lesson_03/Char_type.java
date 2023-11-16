@@ -1,7 +1,7 @@
-package lesson_6;
+package lesson_03;
 
-public class Cons {
+public class Char_type {
     public static void main(String[] args) {
-
+        
     }
 }

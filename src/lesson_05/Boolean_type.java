@@ -1,4 +1,4 @@
-package lesson_5;
+package lesson_05;
 
 public class Boolean_type {
     public static void main(String[] args) {

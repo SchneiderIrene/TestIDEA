@@ -1,4 +1,4 @@
-package lesson_6;
+package lesson_06;
 
 public class If_else {
     public static void main(String[] args) {
