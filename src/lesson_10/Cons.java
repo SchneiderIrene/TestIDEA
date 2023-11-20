@@ -16,7 +16,8 @@ public class Cons {
         int sumOdd = 0;
         char counter = 'y';
 
-        while (counter == 'y') {
+
+        do {
             System.out.println("Enter number");
             num = scanner.nextInt();
             if (num%2==0){
@@ -29,8 +30,11 @@ public class Cons {
             }
             System.out.println("Want you to enter another number? y/n");
             counter = scanner.next().charAt(0);
-
         }
+        while (counter == 'y');
+
+
+
         System.out.println("summa event = " + (sumEven));
         System.out.println("summa odd = " + (sumOdd));
 
