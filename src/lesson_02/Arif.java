@@ -5,7 +5,7 @@ public class Arif {
         double a = 25;
         double b = 3;
         double res = a/3;
-        System.out.println(res);
+        System.out.println(res);    
         System.out.println(a%b);
 
         int c = 10;

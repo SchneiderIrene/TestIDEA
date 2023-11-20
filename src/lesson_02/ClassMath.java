@@ -7,6 +7,6 @@ public class ClassMath {
         System.out.println(abs1);
         System.out.println(Math.pow(23,2));
         System.out.println(Math.round(Math.sqrt(100)));
-        System.out.println(Math.PI);
+        System.out.println(Math.PI  );
     }
 }
