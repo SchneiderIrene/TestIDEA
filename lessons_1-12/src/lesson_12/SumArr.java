@@ -7,7 +7,6 @@ public class SumArr {
     }
 
     public static int sumArr (int [] arr){
-        int index = 0;
         int sum = 0;
         for (int i = 0; i<=arr.length; i++){
             sum+=i;
