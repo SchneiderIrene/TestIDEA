@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Anagramm {
     public static void main(String[] args) {
         String string1 = "mamamoetramu";
-        String string2 = "ramumoetmama";
+        String string2 = "ramumoetmamy";
         System.out.println(anagramm(string1, string2));
+        System.out.println(anagrammTrue(string1, string2));
     }
     public static boolean anagramm(String string1, String string2) {
         char[] arr1 = string1.toCharArray();
@@ -27,4 +28,23 @@ public class Anagramm {
             }
         return true;
     }
-}
+
+    public static boolean anagrammTrue(String string1, String string2) {
+        char[] arr1 = string1.toCharArray();
+        Arrays.sort(arr1);
+        System.out.println(Arrays.toString(arr1));
+
+        char[] arr2 = string2.toCharArray();
+        Arrays.sort(arr2);
+        System.out.println(Arrays.toString(arr2));
+
+        if (arr1.length == arr2.length) {
+            for (int i = 0; i < arr1.length; i++) {
+                return arr1[i] == arr2[i];
+            }
+        }
+        return false;
+    }
+
+    }
+
