@@ -9,10 +9,12 @@ public class Caesar {
 
     public String code (String word){
         String code = "";
-        char[] arr1 = word.toCharArray();
-        for (int i = 0; i<arr1.length; i++){
-           arr1[i] += (char) n;
-            code += arr1[i];
+        int lastChar = 'z';
+        int length = 'z' - 'a'+1;
+        for (char c: word.toCharArray()){
+            int chNoRotation = c +n;
+            int chVal = chNoRotation<=lastChar ? chNoRotation : chNoRotation-length;
+            code+=(char)chVal;
         }
         return code;
     }
