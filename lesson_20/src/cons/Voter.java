@@ -9,6 +9,9 @@ public class Voter {
         this.name = name;
         this.age = age;
         this.address = address;
+        if (age<16) {
+            System.out.println(name + " must be over 18 years old");
+        }
     }
 
     public String getName() {
@@ -16,6 +19,7 @@ public class Voter {
     }
 
     public int getAge() {
+
         return age;
     }
 
@@ -28,38 +32,39 @@ public class Voter {
     }
 
     public void setAge(int age) {
-        this.age = age;
+
+        if (age<16) {
+            System.out.println(name + " must be over 18 years old");
+        }
+        else this.age = age;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
 
-    public void restriction(){
-        if (age<16){
-            System.out.println("Must be over 18 years old");
-        }
-    }
 
     public String toString (){
-        if (age<16) {
-            return "";
-        } else {
             return "Voter's name is: " + name + ", age: " + age + ", address: " + address;
-        }
     }
 
     public static void main(String[] args) {
         Voter voter1 = new Voter("Petrov Alexander", 35, "Street1");
-        voter1.restriction();
         System.out.println(voter1);
 
         Voter voter2 = new Voter("Ivanova Maria", 25, "Street2");
-        voter2.restriction();
         System.out.println(voter2);
 
-        Voter voter3 = new Voter("Sidorov Viktor", 15, "Street3");
-        voter3.restriction();
+        Voter voter3 = new Voter("Sidorov Viktor", 55, "Street3");
+        voter3.setAge(15);
         System.out.println(voter3);
+
+        Voter voter4 = new Voter("Sidorov Pavel", 15, "Street4");
+        System.out.println(voter4);
+
+        Voter[]voters = {voter1, voter2, voter3, voter4};
+        for (Voter voter: voters){
+            System.out.println(voter);
+        }
     }
 }
