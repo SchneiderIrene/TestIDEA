@@ -3,9 +3,10 @@ package trucks;
 public class Main {
     public static void main(String[] args) {
     Truck t1 = new Truck(
+            "SuperMan",
             "Man",
-            "Man",
-            2005, "grey",
+            2005,
+            "grey",
             "Petrov Vasiliy",
             3000,
             70
