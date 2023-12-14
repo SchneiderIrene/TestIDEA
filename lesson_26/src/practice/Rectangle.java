@@ -8,7 +8,12 @@ public class Rectangle extends Area{
     }
 
     @Override
-    public double area(int i) {
-        return i*w;
+    public String area(int i) {
+        return String.format("%d", (i*w));
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle " + super.toString();
     }
 }

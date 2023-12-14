@@ -3,8 +3,14 @@ package practice;
 public class Area {
     int i;
 
-    public double area (int i){
-        return i*i;
+    public String area (int i){
+
+        return String.format("%d",i*i);
+    }
+
+    @Override
+    public String toString() {
+        return  " has area of ";
     }
 }
 
