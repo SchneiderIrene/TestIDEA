@@ -19,7 +19,7 @@ public class PassendeCar extends Car{
 
     public String toString (){
         return "Auto: " + model + " " + manufacturer + ", year: " + year + ", color: " + color +
-                ", number of passengers: " + numberOfPass + " persons" + ", maxFuel: " +  maxFuel + " l" + ". Owner: " + nameOwner;
+                ", number of passengers: " + numberOfPass + " persons" + ", maxFuel: " +  maxFuel + " l" + ". Owner: " + getNameOwner();
 
     }
 }

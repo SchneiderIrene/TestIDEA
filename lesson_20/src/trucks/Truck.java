@@ -44,7 +44,7 @@ public class Truck extends Car{
 
     public String toString (){
         return "Truck: " + model + " " + manufacturer + ", year: " + year + ", color: " + color +
-                ", max Weight: " + maxWeight + " kg" + ", maxFuel: " +  maxFuel + " l" + ". Owner: " + nameOwner;
+                ", max Weight: " + maxWeight + " kg" + ", maxFuel: " +  maxFuel + " l" + ". Owner: " + getNameOwner();
 
     }
 
