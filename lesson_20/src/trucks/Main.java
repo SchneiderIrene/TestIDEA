@@ -7,7 +7,7 @@ public class Main {
                 "John Smith", 150, 5000);
         truck1.fuel(65);
         truck1.doNotGo();
-        System.out.println(truck1.nameOwner);
+        System.out.println(truck1.getNameOwner());
         System.out.println(truck1);
         truck1.setNameOwner("Vasya Vasilev");
         System.out.println(truck1.getNameOwner());
@@ -20,7 +20,7 @@ public class Main {
         truck2.load(3000);
         truck2.unload(1500);
         truck2.doNotGo();
-        System.out.println(truck2.nameOwner);
+        System.out.println(truck2.getNameOwner());
         truck2.setNameOwner("Vasya Vasilev");
         System.out.println(truck2.getNameOwner());
         System.out.println(truck2);
@@ -31,7 +31,7 @@ public class Main {
                 "Schneider Walter", 60, 5);
         passCar1.fuel(55);
         passCar1.doNotGo();
-        System.out.println(passCar1.nameOwner);
+        System.out.println(passCar1.getNameOwner());
         passCar1.setNameOwner("John Smith");
         System.out.println(passCar1.getNameOwner());
         System.out.println(passCar1);
@@ -43,7 +43,7 @@ public class Main {
         passCar2.fuel(65);
         passCar2.numPass(5);
         passCar2.doNotGo();
-        System.out.println(passCar2.nameOwner);
+        System.out.println(passCar2.getNameOwner());
         passCar2.setNameOwner("John Smith");
         System.out.println(passCar2.getNameOwner());
         System.out.println(passCar2);

@@ -5,7 +5,7 @@ public class Car {
     String manufacturer;
     int year;
     String color;
-    String nameOwner;
+   private String nameOwner;
     int maxFuel;
     int currentF = 0;
 
