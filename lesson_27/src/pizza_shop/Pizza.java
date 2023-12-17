@@ -1,7 +1,7 @@
 package pizza_shop;
 
 public class Pizza {
-    String name;
+    private String name;
 
 
     public Pizza(String name) {
@@ -13,15 +13,15 @@ public class Pizza {
     }
 
     public void prepare() {
-        System.out.println(name + " prepare...");
+        System.out.print(name + " prepare... ");
     }
 
     public void bake() {
-        System.out.println(name + " bake...");
+        System.out.print(name + " bake... ");
     }
 
     public void pack() {
-        System.out.println(name + " pack...");
+        System.out.println(name + " pack... ");
     }
 
 
