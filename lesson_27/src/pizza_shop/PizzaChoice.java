@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PizzaChoice {
     static int i;
     static char k;
-    static int numberOfOrders ;
+    static int numberOfOrders = 0;
     static Pizza [] pizzas = new Pizza[5];
 
 
@@ -23,7 +23,6 @@ public class PizzaChoice {
             i = scanner.nextInt();
             System.out.println(choose(i));
             pizzas();
-            numberOfOrders++;
             System.out.println(".....................................");
             System.out.println("Хотите продолжить заказ?");
             System.out.println("y - Да");
@@ -57,7 +56,7 @@ public class PizzaChoice {
         }
     }
     public static Pizza[]pizzas(){
-        pizzas[numberOfOrders] = choose(i);
+        pizzas[numberOfOrders++] = choose(i);
         return pizzas;
     }
 
