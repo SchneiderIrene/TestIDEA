@@ -24,6 +24,13 @@ public class Pizza {
         System.out.println(name + " pack... ");
     }
 
+    public void orderPizza() {
+            prepare();
+            bake();
+            pack();
+
+    }
+
 
 
     @Override
