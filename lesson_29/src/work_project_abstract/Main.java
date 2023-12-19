@@ -15,6 +15,7 @@ public class Main {
         Schooler[]schoolers = {girl1, girl2, boy1, boy2};
 
         for (Schooler schooler: schoolers){
+            System.out.println(schooler);
            schooler.work();
         }
     }
