@@ -1,6 +1,6 @@
 package pizza_project;
 
-public class Pizza {
+abstract public class Pizza {
     private String type;
 
     public Pizza(String type) {
@@ -12,7 +12,7 @@ public class Pizza {
         bake();
         pack();
     }
-    protected void prepare (){}
+    protected abstract void prepare ();
     public void bake (){
         System.out.println("Baking " + type);
     }
