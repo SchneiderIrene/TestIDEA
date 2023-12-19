@@ -1,9 +1,9 @@
 package garden;
 
 public abstract class Plant {
-    String displayName;
-    int height;
-    int age;
+   private String displayName;
+   private int height;
+     private int age;
 
     public Plant(String displayName, int height, int age) {
         this.displayName = displayName;
@@ -11,11 +11,26 @@ public abstract class Plant {
         this.age = age;
     }
 
-     public void growPlants(int year){
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+
+
+    public void growPlants(int year){
         int heightOfSeason = summer()+spring()+autumns()+winter();
         int heightResult = height + heightOfSeason*year;
+        int genAge = age + year;
          System.out.println("Height of " + displayName + " in " + year + " years "
-                 + " is " + heightResult + "cm");
+                 + " is " + heightResult + "cm. Age of " + displayName + ": " + genAge + " years");
      }
     public  int spring(){
         System.out.println("Spring: " + displayName + " has grown in  by " + GROWTH() + "cm");
@@ -28,6 +43,7 @@ public abstract class Plant {
         return 0;
     }
     public abstract int GROWTH();
+
 
 
 

@@ -12,11 +12,11 @@ public class Tree extends Plant{
     }
 
     public  int summer(){
-        System.out.println("Summer: " + displayName + " has grown in  by " + GROWTH + "cm");
+        System.out.println("Summer: " + getDisplayName() + " has grown in  by " + GROWTH + "cm");
         return GROWTH();
     }
     public  int autumns(){
-        System.out.println("Autumns: " + displayName +  " doesn't grow");
+        System.out.println("Autumns: " + getDisplayName() +  " doesn't grow");
         return 0;
     }
 

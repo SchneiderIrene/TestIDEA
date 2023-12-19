@@ -13,11 +13,11 @@ public class Flower extends Plant {
     }
 
     public  int summer(){
-        System.out.println("Summer: " + displayName + " blooms");
+        System.out.println("Summer: " + getDisplayName() + " blooms");
         return 0;
     }
     public  int autumns(){
-        System.out.println("Autumns: " + displayName + " cut");
+        System.out.println("Autumns: " + getDisplayName() + " cut");
         return -GROWTH;
     }
 

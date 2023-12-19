@@ -1,7 +1,6 @@
 package garden;
 
 public  class Garden {
-    public  int year;
     public static void main(String[] args) {
         Plant flower = new Flower("Tulane", 0, 0);
         Plant tree = new Tree("Birch", 10, 0);
