@@ -4,6 +4,7 @@ public class Margarita extends Pizza{
     private static String TYPE = "Margarita";
 
     public Margarita() {
+
         super(TYPE);
     }
 
