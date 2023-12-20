@@ -21,8 +21,12 @@ public abstract class Plant {
         int heightOfSeason = spring() + summer() + autumns() + winter();
         int heightResult = height + heightOfSeason * year;
         int genAge = age + year;
-        System.out.println("Height of " + displayName + " in " + year + " years "
-                + " is " + heightResult + "cm. Age of " + displayName + ": " + genAge + " years");
+        if (genAge == 0 || genAge == 1){
+            System.out.println("Height of " + displayName + " in " + year + " years "
+                    + " is " + heightResult + "cm. Age of " + displayName + ": " + genAge + " year old");
+        }else { System.out.println("Height of " + displayName + " in " + year + " years "
+                + " is " + heightResult + "cm. Age of " + displayName + ": " + genAge + " years old");}
+
     }
 
     public int spring() {
