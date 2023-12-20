@@ -7,11 +7,6 @@ public class Flower extends Plant {
         super(displayName, height, age);
     }
 
-    @Override
-    public int spring() {
-        return super.spring();
-    }
-
     public  int summer(){
         System.out.println("Summer: " + getDisplayName() + " blooms");
         return 0;
@@ -21,10 +16,6 @@ public class Flower extends Plant {
         return -GROWTH;
     }
 
-    @Override
-    public int winter() {
-        return super.winter();
-    }
     @Override
     public int GROWTH() {
         return GROWTH;

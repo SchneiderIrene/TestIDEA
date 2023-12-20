@@ -9,7 +9,7 @@ public  class Garden {
         for (Plant plant: plants){
 
             plant.growPlants(3);
-            System.out.println("-----------");
+            System.out.println("--------------------------------------------------------------");
         }
 
 

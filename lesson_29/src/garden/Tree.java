@@ -6,10 +6,6 @@ public class Tree extends Plant{
         super ( displayName, height, age);
     }
 
-    @Override
-    public int spring() {
-        return super.spring();
-    }
 
     public  int summer(){
         System.out.println("Summer: " + getDisplayName() + " has grown in  by " + GROWTH + "cm");
@@ -18,11 +14,6 @@ public class Tree extends Plant{
     public  int autumns(){
         System.out.println("Autumns: " + getDisplayName() +  " doesn't grow");
         return 0;
-    }
-
-    @Override
-    public int winter() {
-        return super.winter();
     }
 
     @Override
