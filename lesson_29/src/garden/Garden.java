@@ -8,7 +8,7 @@ public  class Garden {
         Plant []plants = {flower,tree};
         for (Plant plant: plants){
 
-            plant.growPlants(10);
+            plant.growPlants(3);
             System.out.println("-----------");
         }
 
