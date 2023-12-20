@@ -1,7 +1,7 @@
 package garden;
 
 public class Tree extends Plant{
-    private static int GROWTH = 10;
+    private static final int GROWTH = 10;
     public Tree(String displayName, int height, int age) {
         super ( displayName, height, age);
     }
