@@ -2,8 +2,8 @@ package cons;
 
 public class MethodIndex {
     public static void main(String[] args) {
-        int[] ints = {1, 1, 1, 2, 7, 2, 3};
-        //            3,2,7,3,1,1
+        int[] ints = {1, 2, 2, 7, 2, 3, 9};
+
         System.out.println(isIndex(ints));
         System.out.println(isIndex2(ints));
     }
@@ -12,17 +12,22 @@ public class MethodIndex {
 
         int sum = 0;
         int leftSum = ints[0];
-        int index;
+        int lastIndex = ints.length-2;
+        int index = 0;
 
-        for (int i : ints) {
-            sum += i;
-            index = i;
-            if (leftSum == sum - leftSum - index) {
-                return index;
+        for (int anInt : ints) {
+            sum += anInt;
+        }
+            for (int i = 1; i<=lastIndex; i++) {
+                int cur = ints[i];
+            if (leftSum == sum - leftSum - cur) {
+                index = i;
+               break;
             }
+                leftSum+=cur;
         }
 
-        return -1;
+        return index;
     }
 
     public static int isIndex2(int[] ints) {
@@ -33,12 +38,12 @@ public class MethodIndex {
         for (int i : ints) {
             sum += i;
         }
-        for (int anInt : ints) {
-            sum -= anInt;
+        for (int i =0; i<ints.length; i++) {
+            sum -= ints[i];
             if (leftsum == sum) {
-                return anInt;
+                return i;
             } else {
-                leftsum += anInt;
+                leftsum += ints[i];
             }
         }
         return -1;
