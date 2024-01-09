@@ -1,6 +1,8 @@
 package Buchhalter;
 
-public class Company {
+import java.util.Arrays;
+
+public class Company  {
 
     private Employee[] employees;
     private int companySize;
@@ -28,6 +30,7 @@ public class Company {
     }
 
     public void display(){
+       sortName(employees);
         for (int i = 0; i < companySize; i++){
             System.out.println(employees[i]);
         }
@@ -40,5 +43,13 @@ public class Company {
         }
         return sum;
     }
+
+    public void sortName(Employee[]employees){
+        Arrays.sort(employees, 0,companySize);
+    }
+
+
+
+
 
 }

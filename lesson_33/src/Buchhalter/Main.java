@@ -1,5 +1,7 @@
 package Buchhalter;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Employee wageEmployee1 = new WageEmployee(1, "John", "Smith", 150, 15);
@@ -22,8 +24,18 @@ public class Main {
         company.display();
         System.out.println(company.sumSalary());
         System.out.println("---------------------------");
-        company.removeEmployee(wageEmployee1);
+
         company.display();
+
+        System.out.println("---------------------------------");
+
+        Employee[]employees = {wageEmployee1, wageEmployee2, wageEmployee3, salesManager1, salesManager2, salesManager3};
+        Arrays.sort(employees);
+        for (Employee employee: employees){
+            System.out.println(employee);
+        }
+
+
 
     }
 }

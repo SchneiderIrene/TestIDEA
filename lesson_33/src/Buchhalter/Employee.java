@@ -1,6 +1,8 @@
 package Buchhalter;
 
-public abstract class Employee {
+import org.jetbrains.annotations.NotNull;
+
+public abstract class Employee implements Comparable<Employee>{
     private int id;
     private String name;
     private String secondName;
@@ -18,7 +20,7 @@ public abstract class Employee {
         return id;
     }
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
@@ -41,5 +43,7 @@ public abstract class Employee {
 
     public abstract double salary();
 
-
+    public int compareTo(Employee o) {
+        return getName().compareTo(o.getName());
+    }
 }
