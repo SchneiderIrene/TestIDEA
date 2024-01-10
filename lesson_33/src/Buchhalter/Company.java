@@ -30,7 +30,7 @@ public class Company  {
     }
 
     public void display(){
-       sortName(employees);
+       sortSecondName(employees);
         for (int i = 0; i < companySize; i++){
             System.out.println(employees[i]);
         }
@@ -38,6 +38,13 @@ public class Company  {
 
     public void displaySortID(){
         sortID(employees);
+        for (int i = 0; i < companySize; i++){
+            System.out.println(employees[i]);
+        }
+    }
+
+    public void displaySortNameID(){
+        sortNameId (employees);
         for (int i = 0; i < companySize; i++){
             System.out.println(employees[i]);
         }
@@ -51,12 +58,18 @@ public class Company  {
         return sum;
     }
 
-    public void sortName(Employee[]employees){
+    public void sortSecondName(Employee[]employees){
+
         Arrays.sort(employees, 0,companySize);
     }
 
     public void sortID (Employee[] employees){
+
         Arrays.sort(employees,  0, companySize, new IdComparator());
+    }
+
+    public void  sortNameId(Employee[]employees){
+        Arrays.sort(employees,  0, companySize, new NameIdComporator());
     }
 
 

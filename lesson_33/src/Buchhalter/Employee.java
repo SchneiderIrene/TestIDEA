@@ -41,8 +41,6 @@ public abstract class Employee implements Comparable<Employee>{
     public abstract double salary();
 
     public int compareTo(Employee o) {
-        return getName().compareTo(o.getName()) == 0
-                ? Integer.compare(getId(), o.getId())
-                : getName().compareTo(o.getName());
+        return getSecondName().compareTo(o.getSecondName());
     }
 }

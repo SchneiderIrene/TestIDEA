@@ -25,10 +25,16 @@ public class Main {
         company.addEmployee(salesManager1);
         company.addEmployee(salesManager2);
         company.addEmployee(salesManager3);
-        company.display();
+
         System.out.println(company.sumSalary());
+
+        System.out.println("---------------------------");
+        company.display();
         System.out.println("---------------------------");
         company.displaySortID();
+        System.out.println("---------------------------");
+        company.displaySortNameID();
+        System.out.println("---------------------------");
 
 
 
