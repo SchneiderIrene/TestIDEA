@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Comparator;
 
-public class Animal implements Comparator <Animal> {
+public class Animal {
     private String name;
     private int weight;
     private String color;
@@ -34,8 +34,5 @@ public class Animal implements Comparator <Animal> {
                 '}';
     }
 
-    @Override
-    public int compare(Animal o1, Animal o2) {
-        return 0;
-    }
+
 }
