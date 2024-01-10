@@ -1,4 +1,4 @@
-package comporator_interface;
+package comparator_interface;
 
 import java.util.Arrays;
 

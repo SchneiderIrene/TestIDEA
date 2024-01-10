@@ -1,4 +1,4 @@
-package comporator_interface;
+package comparator_interface;
 
 public class Author implements Comparable <Author>{
     private String name;
