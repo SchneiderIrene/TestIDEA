@@ -7,6 +7,8 @@ public class Main {
         Employee wageEmployee1 = new WageEmployee(1, "John", "Smith", 150, 15);
         Employee wageEmployee2 = new WageEmployee(2, "Jack", "Black", 170, 11);
         Employee wageEmployee3 = new WageEmployee(3, "Ann", "Potter", 70, 17);
+        Employee wageEmployee4 = new WageEmployee(7, "Ann", "Potter", 70, 17);
+        Employee wageEmployee5 = new WageEmployee(8, "Ann", "Potter", 70, 17);
 
         Employee salesManager1 = new SalesManager(4, "Rob", "White", 210, 4000, 0.1);
         Employee salesManager2 = new SalesManager(5, "Kate", "Blue", 30, 100000, 0.05);
@@ -18,22 +20,17 @@ public class Main {
         company.addEmployee(wageEmployee1);
         company.addEmployee(wageEmployee2);
         company.addEmployee(wageEmployee3);
+        company.addEmployee(wageEmployee4);
+        company.addEmployee(wageEmployee5);
         company.addEmployee(salesManager1);
         company.addEmployee(salesManager2);
         company.addEmployee(salesManager3);
         company.display();
         System.out.println(company.sumSalary());
         System.out.println("---------------------------");
+        company.displaySortID();
 
-        company.display();
 
-        System.out.println("---------------------------------");
-
-        Employee[]employees = {wageEmployee1, wageEmployee2, wageEmployee3, salesManager1, salesManager2, salesManager3};
-        Arrays.sort(employees);
-        for (Employee employee: employees){
-            System.out.println(employee);
-        }
 
 
 

@@ -36,6 +36,13 @@ public class Company  {
         }
     }
 
+    public void displaySortID(){
+        sortID(employees);
+        for (int i = 0; i < companySize; i++){
+            System.out.println(employees[i]);
+        }
+    }
+
     public double sumSalary (){
         double sum = 0;
         for (int i = 0; i<companySize; i++){
@@ -46,6 +53,10 @@ public class Company  {
 
     public void sortName(Employee[]employees){
         Arrays.sort(employees, 0,companySize);
+    }
+
+    public void sortID (Employee[] employees){
+        Arrays.sort(employees,  0, companySize, new IdComparator());
     }
 
 
