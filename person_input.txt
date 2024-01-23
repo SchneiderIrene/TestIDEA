@@ -1,0 +1,5 @@
+John, Smith, Notebook, 500
+Peter, Black, Mac, 800
+John, Smith, Keyboard, 25
+Peter, Black, Mouse, 100
+Ann, Smith, TV, 1000
