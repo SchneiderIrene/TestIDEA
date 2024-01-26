@@ -1,6 +1,7 @@
 package stream_api;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -126,8 +127,112 @@ public class Main {
         System.out.println(srtingList.stream().filter(sl -> sl.length()>3)
                 .count());
 
+        System.out.println("-----------------------------------------------");
+
+        List <String> list = Arrays.asList("one","two","three","four", "five");
+        Optional <String> first = list.stream().findFirst();
+        System.out.println(first.get());
+
+        System.out.println("-----------------------------------------------");
+
+        Optional <String> any = list.stream().findAny();
+        System.out.println(any.get());
+
+        System.out.println("-----------------------------------------------");
+
+        List<String> nameList = Arrays.asList("Jack", "John", "Ann", "Vladislav");
+        boolean allEl = nameList.stream().allMatch(string -> string.length()>2);
+        System.out.println(allEl);
+
+        System.out.println("-----------------------------------------------");
+
+        boolean anyEl = nameList.stream().anyMatch(string -> string.length()>7);
+        System.out.println(anyEl);
+
+        System.out.println("-----------------------------------------------");
+
+        boolean nonEl = nameList.stream().noneMatch(string -> string.equals("Tim"));
+        nonEl = nameList.stream().noneMatch(string -> string.equals("Ann"));
+        System.out.println(nonEl);
+
+        System.out.println("-----------------------------------------------");
+
+        List<Integer>integers = List.of(3,4,1,34,68,19);
+        Optional<Integer> min = integers.stream().min(Integer::compare);
+        System.out.println(min);
+        System.out.println(min.get());
 
 
+        Optional<Integer> max = integers.stream().max(Integer::compare);
+        System.out.println(max);
+        System.out.println(max.get());
+
+        System.out.println("-----------------------------------------------");
+
+        Optional<Integer> res = Stream.of(1,2,3,4,5).reduce((x,y) -> x*y);
+        System.out.println(res.get());
+
+        Optional<String> stringRes = Stream.of("Hello", "Java", "!!!")
+                .reduce((str1, str2) -> str1 + " " + str2);
+        System.out.println(stringRes.get());
+
+        System.out.println("-----------------------------------------------");
+
+       int result =  Stream.of(1,2,3,4,5).reduce(2, (a,b) -> a*b);
+        System.out.println(result);
+
+
+        System.out.println("-----------------------------------------------");
+
+
+        List <String> carsList = new  ArrayList<>();
+        carsList.add("Volvo");
+        carsList.add("Mercedes");
+        carsList.add("BMW");
+        carsList.add("Opel");
+        carsList.add("Ford");
+
+       List<String> carsFilter = carsList.stream()
+                .filter(car -> car.length()>3)
+                .collect(Collectors.toList());
+
+        System.out.println(carsFilter);
+
+        System.out.println("-----------------------------------------------");
+
+        Set <String> carsSet  = carsList
+                .stream()
+                .filter(car -> car.length()>3)
+                .collect(Collectors.toSet());
+
+        System.out.println(carsSet);
+
+        System.out.println("-----------------------------------------------");
+
+        Car2 car2_1 = new Car2 ("BMW", 150000);
+        Car2 car2_2 = new Car2 ("Mercedes", 200000);
+        Car2 car2_3 = new Car2 ("Opel", 40000);
+
+        List<Car2> car2List = Arrays.asList(car2_1, car2_2, car2_3);
+        Map<String, Integer> carMap = car2List.stream()
+                .collect(Collectors.toMap(Car2::getBrand, Car2::getPrice));
+
+        carMap.forEach((key, value) -> System.out.println("key: " + key + ", value: " + value));
+        System.out.println(carMap);
+
+        System.out.println("-----------------------------------------------");
+
+
+        String s1 = "123456";
+        String s2 = "fhfhghgfhg";
+        System.out.println(isNumber(s1));
+        System.out.println(isNumber(s2));
+
+
+    }
+
+    public static boolean isNumber(String s){
+        return s.chars().allMatch(Character::isDigit);
     }
 }
 
