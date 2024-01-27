@@ -12,7 +12,8 @@ public class OurColletors {
 
         List<Car2> car2List = Arrays.asList(car2_1, car2_2, car2_3);
 
-        ArrayList<Car2> resCar = car2List.stream().collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<Car2> resCar = car2List.stream()
+                .collect(Collectors.toCollection(ArrayList::new));
 
 
         List<String> nameList = Arrays.asList("John", "Bill", "Tim", "Jack", "Peter", "Benji");
