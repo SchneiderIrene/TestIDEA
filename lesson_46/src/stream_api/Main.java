@@ -27,7 +27,8 @@ public class Main {
         IntStream.of(10, 20, 30, 40, 50, 60, 70, 80)
                 .filter(i -> i >= 31)
                 .map(i -> i * 2)
-                .limit(4).forEach(System.out::println);
+                .limit(4)
+                .forEach(System.out::println);
 
         System.out.println("-----------------------------------------------");
 
@@ -59,7 +60,8 @@ public class Main {
 
         System.out.println("After filter");
         names = Stream.of("John", "Jack", "Ann");
-        names.filter(n -> n.length()==4).forEach(System.out::println);
+        names.filter(n -> n.length()==4)
+                .forEach(System.out::println);
 
         Stream<Car> carStream = Stream.of(new Car("Ford", 50000),
                 new Car("Mercedes", 100000),
