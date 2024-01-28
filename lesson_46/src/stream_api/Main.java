@@ -52,6 +52,7 @@ public class Main {
         Random random = new Random();
         random.doubles();
 
+
         Stream<String> names = Stream.of("John", "Jack", "Ann");
         names.forEach(System.out::println);
 
@@ -159,24 +160,6 @@ public class Main {
 
         System.out.println("-----------------------------------------------");
 
-        List<Integer>integers = List.of(3,4,1,34,68,19);
-        Optional<Integer> min = integers.stream().min(Integer::compare);
-        System.out.println(min);
-        System.out.println(min.get());
-
-
-        Optional<Integer> max = integers.stream().max(Integer::compare);
-        System.out.println(max);
-        System.out.println(max.get());
-
-        System.out.println("-----------------------------------------------");
-
-        Optional<Integer> res = Stream.of(1,2,3,4,5).reduce((x,y) -> x*y);
-        System.out.println(res.get());
-
-        Optional<String> stringRes = Stream.of("Hello", "Java", "!!!")
-                .reduce((str1, str2) -> str1 + " " + str2);
-        System.out.println(stringRes.get());
 
         System.out.println("-----------------------------------------------");
 
@@ -229,6 +212,7 @@ public class Main {
         String s2 = "fhfhghgfhg";
         System.out.println(isNumber(s1));
         System.out.println(isNumber(s2));
+
 
 
     }
