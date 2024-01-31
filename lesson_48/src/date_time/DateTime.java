@@ -1,6 +1,8 @@
 package date_time;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -76,6 +78,43 @@ public class DateTime {
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
+
+        LocalDate localDate = LocalDate.now();
+        LocalDate localDate4 = localDate.plus(Period.ofDays(5));
+        System.out.println(localDate4);
+
+        int five = Period.between(localDate, localDate).getDays();
+        System.out.println(five);
+        ChronoUnit.DAYS.between(localDate, localDate4);
+
+        LocalTime localTime = LocalTime.of(9, 40, 0);
+        LocalTime localTime5 = localTime.plus(Duration.ofHours(3));
+        long duration = Duration.between(localTime, localTime5).getSeconds();
+        System.out.println(duration);
+
+        ChronoUnit.SECONDS.between(localTime, localTime5);
+
+        LocalDateTime dateTime = LocalDateTime.now();
+        System.out.println(dateTime);
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.BASIC_ISO_DATE;
+        String formatter = dateTimeFormatter.format(dateTime);
+        System.out.println(formatter);
+
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ISO_DATE_TIME;
+        String formatter1 = dateTimeFormatter1.format(dateTime);
+        System.out.println(formatter1);
+
+        DateTimeFormatter ourFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy EEEE HH:mm:ss");
+        DateTimeFormatter ourFormatter2 = DateTimeFormatter.ofPattern("dd MMM yy EEE HH:mm:ss");
+        DateTimeFormatter ourFormatter3 = DateTimeFormatter.ofPattern("dd M yy E HH:mm:ss");
+        dateTime = LocalDateTime.now();
+        String res = ourFormatter.format(dateTime);
+        String res2 = ourFormatter2.format(dateTime);
+        String res3 = ourFormatter3.format(dateTime);
+        System.out.println(res);
+        System.out.println(res2);
+        System.out.println(res3);
 
     }
 }
